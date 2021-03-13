@@ -17,6 +17,25 @@ export default function Home() {
               <q className="font-serif italic text-gray-300">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</q>
               </div>
             </figure>
+            <nav className="md:text-center">
+              <ul>
+                <li>
+                  <Link to="/">Experience</Link>
+                </li>
+                <li>
+                  <Link to="/">Education</Link>
+                </li>
+                <li>
+                  <Link to="/">Courses</Link>
+                </li>
+                <li>
+                  <Link to="/">Achievements</Link>
+                </li>
+                <li>
+                  <Link to="/">Notable experience</Link>
+                </li>
+              </ul>
+            </nav>
         </header>
         <article className="experience">
           <h2>Experience <span className="text-sm">(brief)</span></h2>

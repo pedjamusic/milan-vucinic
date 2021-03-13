@@ -30,3 +30,22 @@
         @apply mt-2;
     }
 }
+
+@layer components {
+    nav li {
+        @apply inline-block px-1 pt-8 md:py-1;
+    }
+    nav li:first-child {
+        @apply pl-0;
+    }
+    nav li:last-child {
+        @apply pr-0;
+    }
+    nav li a {
+        @apply underline;
+    }
+    nav li a:hover {
+        @apply text-blue-500;
+    }
+
+}
