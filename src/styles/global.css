@@ -24,7 +24,7 @@
         @apply text-base;
     }
     article {
-        @apply mt-6;
+        @apply mt-8;
     }
     article > h3 {
         @apply mt-2;
@@ -33,13 +33,13 @@
 
 @layer components {
     nav li {
-        @apply inline-block px-1 pt-8 md:py-1;
+        @apply md:inline-block p-0 md:px-1;
     }
     nav li:first-child {
-        @apply pl-0;
+        @apply md:pl-0;
     }
     nav li:last-child {
-        @apply pr-0;
+        @apply md:pr-0;
     }
     nav li a {
         @apply underline;
