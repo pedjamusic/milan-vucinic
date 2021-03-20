@@ -1,20 +1,37 @@
 backend:
-  name: github
-  repo: pedjamusic/milan-vucinic
-  branch: main
+  name: "github"
+  repo: "pedjamusic/milan-vucinic"
+  branch: "main"
 
-publish_mode: editorial_workflow
+publish_mode: "editorial_workflow"
 
-media_folder: "static/assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "images/uploads"
+# public_folder: "/assets/uploads"
 
 collections:
-  - name: resume
-    label: Resume
-    folder: resume
+  - name: "experience"
+    label: "Experience"
+    folder: "experience"
     create: true
     fields:
-      - { name: path, label: Path }
-      - { name: date, label: Date, widget: datetime }
-      - { name: title, label: Title }
-      - { name: body, label: Body, widget: markdown }
+      - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", default: "Experience" }
+      - { name: "body", label: "Body", widget: "markdown" }
+      - { name: "gallery", label: "Gallery", widget: "image" }
+  - name: "education"
+    label: "Education"
+    folder: "education"
+    create: true
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", default: "Education" }
+      - { name: "body", label: "Body", widget: "markdown" }
+  - name: "courses"
+    label: "Courses"
+    folder: "courses"
+    create: true
+    fields:
+      - { name: "date", label: "Date", widget: "datetime" }
+      - { name: "title", label: "Title", default: "Courses" }
+      - { name: "body", label: "Body", widget: "markdown" }
