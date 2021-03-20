@@ -15,9 +15,9 @@ collections:
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "title", label: "Title", default: "Experience" }
-      - { name: "body", label: "Body", widget: "markdown" }
+      - { name: "title", label: "Title" }
+      - { name: "employer", label: "Employer" }
+      - { name: "description", label: "Description", widget: "markdown" }
       - { name: "gallery", label: "Gallery", widget: "image" }
   - name: "education"
     label: "Education"
