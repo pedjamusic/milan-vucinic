@@ -1,17 +1,20 @@
 backend:
-  name: "github"
-  repo: "pedjamusic/milan-vucinic"
-  branch: "main"
+  name: github
+  # name: git-gateway
+  repo: pedjamusic/milan-vucinic
+  branch: main
+  identity_url: "https://milan-vucinic.netlify.app/.netlify/identity"
+  gateway_url: "https://milan-vucinic.netlify.app/.netlify/git"
 
-publish_mode: "editorial_workflow"
+publish_mode: editorial_workflow
 
-media_folder: "images/uploads"
+media_folder: "/src/assets/images/uploads"
 # public_folder: "/assets/uploads"
 
 collections:
   - name: "experience"
     label: "Experience"
-    folder: "experience"
+    folder: "/src/pages/experience"
     create: true
     fields:
       - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
@@ -21,7 +24,7 @@ collections:
       - { name: "gallery", label: "Gallery", widget: "image" }
   - name: "education"
     label: "Education"
-    folder: "education"
+    folder: "/src/pages/education"
     create: true
     fields:
       - { name: "date", label: "Date", widget: "datetime" }
@@ -29,7 +32,7 @@ collections:
       - { name: "body", label: "Body", widget: "markdown" }
   - name: "courses"
     label: "Courses"
-    folder: "courses"
+    folder: "/src/pages/courses"
     create: true
     fields:
       - { name: "date", label: "Date", widget: "datetime" }
