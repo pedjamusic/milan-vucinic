@@ -1,30 +1,49 @@
 backend:
-  name: github
-  # name: git-gateway
+  # name: github
+  name: git-gateway
   repo: pedjamusic/milan-vucinic
   branch: main
   identity_url: "https://milan-vucinic.netlify.app/.netlify/identity"
   gateway_url: "https://milan-vucinic.netlify.app/.netlify/git"
 
+# when using the default proxy server port
+# local_backend: true
+
 publish_mode: editorial_workflow
 
-media_folder: "/src/assets/images/uploads"
-# public_folder: "/assets/uploads"
+media_folder: "/src/assets"
+public_folder: "/static/assets"
 
 collections:
+  - label: "Pages"
+    name: "pages"
+    files:
+      - label: "Landing page"
+        name: "landing"
+        file: "content/landing.md"
+        fields:
+          - { label: "Your name", name: "name", default: "Milan Vucinic" }
+          - { label: "Vocation", name: "vocation", default: "Strength & Conditioning Coach" }
+          - { label: "Quote", name: "quote", default: "Lorem ipsum, dolor sit amet consectetur adipisicing elit." }
+          - { label: "Photo", name: "photo", widget: "image", allow_multiple: false }
+      - label: "Experience"
+        name: "experience"
+        file: "content/experience.md"
+        fields:
+          - { label: "Title", name: "title" }
   - name: "experience"
     label: "Experience"
-    folder: "/src/pages/experience"
+    folder: "content/experience"
     create: true
     fields:
-      - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
+      # - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
       - { name: "title", label: "Title" }
       - { name: "employer", label: "Employer" }
       - { name: "description", label: "Description", widget: "markdown" }
-      - { name: "gallery", label: "Gallery", widget: "image" }
+      - { name: "gallery", label: "Gallery", widget: "image", allow_multiple: true }
   - name: "education"
     label: "Education"
-    folder: "/src/pages/education"
+    folder: "content/education"
     create: true
     fields:
       - { name: "date", label: "Date", widget: "datetime" }
@@ -32,7 +51,7 @@ collections:
       - { name: "body", label: "Body", widget: "markdown" }
   - name: "courses"
     label: "Courses"
-    folder: "/src/pages/courses"
+    folder: "content/courses"
     create: true
     fields:
       - { name: "date", label: "Date", widget: "datetime" }
