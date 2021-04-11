@@ -6,54 +6,41 @@ backend:
   identity_url: "https://milan-vucinic.netlify.app/.netlify/identity"
   gateway_url: "https://milan-vucinic.netlify.app/.netlify/git"
 
-# when using the default proxy server port
-# local_backend: true
+# when using the default proxy server port; npx netlify-cms-proxy-server
+local_backend: true
 
 publish_mode: editorial_workflow
 
-media_folder: "/src/assets"
-public_folder: "/static/assets"
+media_folder: static/assets
+public_folder: assets
 
 collections:
-  - label: "Pages"
-    name: "pages"
+  - label: Sections
+    name: sections
     files:
-      - label: "Landing page"
-        name: "landing"
-        file: "content/landing.md"
+      - label: "Personal info"
+        name: personal
+        file: content/personal.json
+        extension: json
+        description: "Personal Information of The User"
         fields:
-          - { label: "Your name", name: "name", default: "Milan Vucinic" }
-          - { label: "Vocation", name: "vocation", default: "Strength & Conditioning Coach" }
-          - { label: "Quote", name: "quote", default: "Lorem ipsum, dolor sit amet consectetur adipisicing elit." }
-          - { label: "Photo", name: "photo", widget: "image", allow_multiple: false }
-      - label: "Experience"
-        name: "experience"
-        file: "content/experience.md"
+          - { label: "Your name", name: name, default: "John Appleseed" }
+          - { label: Vocation, name: vocation, default: "Engineer" }
+          - { label: Quote, name: quote, default: "Lorem ipsum, dolor sit amet consectetur adipisicing elit." }
+          - { label: Photo, name: photo, widget: image, allow_multiple: false }
+      - label: Jobs
+        name: jobs
+        # folder: content/jobs
+        file: content/jobs.json
+        create: true
+        widget: list
+        allow_add: true
         fields:
-          - { label: "Title", name: "title" }
-  - name: "experience"
-    label: "Experience"
-    folder: "content/experience"
-    create: true
-    fields:
-      # - { label: "Layout", name: "layout", widget: "hidden", default: "experience" }
-      - { name: "title", label: "Title" }
-      - { name: "employer", label: "Employer" }
-      - { name: "description", label: "Description", widget: "markdown" }
-      - { name: "gallery", label: "Gallery", widget: "image", allow_multiple: true }
-  - name: "education"
-    label: "Education"
-    folder: "content/education"
-    create: true
-    fields:
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "title", label: "Title", default: "Education" }
-      - { name: "body", label: "Body", widget: "markdown" }
-  - name: "courses"
-    label: "Courses"
-    folder: "content/courses"
-    create: true
-    fields:
-      - { name: "date", label: "Date", widget: "datetime" }
-      - { name: "title", label: "Title", default: "Courses" }
-      - { name: "body", label: "Body", widget: "markdown" }
+          - { label: Category, name: category, widget: hidden, default: jobs }
+          - { label: Title, name: title }
+          - { label: "Start Date", name: startdate, widget: date, format: "YYYY-MM" }
+          - { label: "End Date", name: enddate, widget: date, format: "YYYY-MM" }
+          - { label: Employer, name: employer }
+          - { label: Location, name: location, required: false }
+          - { label: Description, name: description, widget: markdown }
+          - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
