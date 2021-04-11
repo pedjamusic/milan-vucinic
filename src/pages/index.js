@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { Link } from 'gatsby'
+import Job from '../components/job'
 
 export default function Landing({ data }) {
   const headerInfo = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
@@ -22,7 +23,7 @@ export default function Landing({ data }) {
         <h2>Experience <span className="text-sm">(brief)</span></h2>
         <section className="list-of-positions">
           <ul>
-            <li>Head of Strength &amp; Conditioning <span className="block lg:float-right text-gray-400"><span className="inline lg:hidden">@</span>Professional Volleyball Club, Sweden</span></li>
+            <Job />
             <li>Physical Education Teacher <span className="block lg:float-right text-gray-400"><span className="inline lg:hidden">@</span>International English School, Stockholm, Sweden</span></li>
             <li>Teaching Instructor - Physical Activities <span className="block lg:float-right text-gray-400"><span className="inline lg:hidden">@</span>Washington State University, WA, US</span></li>
             <li>Assistant Volleyball Coach <span className="block lg:float-right text-gray-400"><span className="inline lg:hidden">@</span>NCAA / Washington State University, WA, US</span></li>
@@ -52,7 +53,7 @@ export default function Landing({ data }) {
 
 export const pageQuery = graphql`
   query headerQuery {
-    allFile(filter: {name: {eq: "landing"}}) {
+    allFile(filter: {name: {eq: "personal"}}) {
       edges {
         node {
           childMarkdownRemark {

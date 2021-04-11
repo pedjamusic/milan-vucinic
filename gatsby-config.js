@@ -16,15 +16,16 @@ module.exports = {
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/content/`,
-        name: "content"
+        path: `${__dirname}/src/pages`,
+        name: "pages"
       }
     },
+    `gatsby-transformer-json`,
     {
       resolve: "gatsby-source-filesystem",
       options: {
-        path: `${__dirname}/src/pages`,
-        name: "pages"
+        path: `${__dirname}/content/`,
+        name: "content"
       }
     },
     "gatsby-plugin-postcss",
