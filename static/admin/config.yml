@@ -28,11 +28,12 @@ collections:
         file: content/personal.md
         extension: md
         fields:
-          - { label: "Your name", name: name, default: "John Appleseed" }
-          - { label: Vocation, name: vocation, default: "Engineer" }
           - { label: Photo, name: photo, widget: image, allow_multiple: false }
-          - { label: E-Mail, name: email }
+          - { label: "Full Name", name: name, default: "John Appleseed" }
+          - { label: Vocation, name: vocation, default: "Engineer" }
           - { label: "Date of Birth", name: dob, widget: date, format: "D.M.YYYY." }
+          - { label: E-Mail, name: email }
+          - { label: "Contact Phone", name: tel }
           - { label: "Marital Status", name: marriage, required: false, widget: select, options: ["Yes", "No", "Preffer not to say"]}
           - { label: Quote, name: quote, required: false, default: "Lorem ipsum, dolor sit amet consectetur adipisicing elit." }
       - name: 'jobs'
