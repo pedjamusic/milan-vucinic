@@ -57,3 +57,23 @@ collections:
               - { label: Location, name: location, required: false }
               - { label: Description, name: description, widget: markdown, required: false }
               - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
+      - name: 'education'
+        label: 'Education'
+        file: content/education.json
+        extension: json
+        editor:
+          preview: false
+        fields:
+          - name: education
+            label: education
+            summary: "{{fields.degree}}"
+            widget: list
+            fields:
+              - { label: Category, name: category, widget: hidden, default: education }
+              - { label: Degree, name: degree, widget: select, options: ["Bachelor", "Master", "Doctor", "Certificate"] }
+              - { label: "Field of Studies", name: fos }
+              - { label: University, name: university }
+              - { label: "Start Date", name: startdate, widget: date, format: "YYYY-MM" }
+              - { label: "End Date", name: enddate, widget: date, format: "YYYY-MM" }
+              - { label: Description, name: description, widget: markdown, required: false }
+              - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
