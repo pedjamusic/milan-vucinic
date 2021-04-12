@@ -6,7 +6,7 @@ import Edu from '../components/edu'
 import eduData from '../../content/education.json'
 
 export default function Landing({data}) {
-  const headerInfo = data.allFile.edges[0].node.childMarkdownRemark.frontmatter
+  const headerInfo = data.allMarkdownRemark.edges[0].node.frontmatter
   return (
     <main className="w-full md:w-7/12 md:max-w-4xl mx-auto p-4 md:py-8 md:px-0">
       <header>
@@ -45,16 +45,14 @@ export default function Landing({data}) {
 
 export const landingQuery = graphql`
   query landingQuery {
-    allFile(filter: {name: {eq: "personal"}}) {
+    allMarkdownRemark {
       edges {
         node {
-          childMarkdownRemark {
-            frontmatter {
-              photo
-              name
-              vocation
-              quote
-            }
+          frontmatter {
+            photo
+            name
+            vocation
+            quote
           }
         }
       }

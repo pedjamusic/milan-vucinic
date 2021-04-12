@@ -28,6 +28,7 @@ collections:
         file: content/personal.md
         extension: md
         fields:
+          - { label: Category, name: category, widget: hidden, default: personal }
           - { label: Photo, name: photo, widget: image, allow_multiple: false }
           - { label: "Full Name", name: name, default: "John Appleseed" }
           - { label: Vocation, name: vocation, default: "Engineer" }
