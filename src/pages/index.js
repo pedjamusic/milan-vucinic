@@ -17,7 +17,7 @@ export default function Landing({data}) {
               <Link to="/" className="text-2xl">{headerInfo.name}</Link>
               <h1 className="text-base text-gray-400 text-bold">{headerInfo.vocation}</h1>
             </figcaption>
-            <q className="font-serif italic text-gray-300">{headerInfo.quote}</q>
+            {!!headerInfo.quote ? <q className="font-serif italic text-gray-300">{headerInfo.quote}</q> : <br />}
           </div>
         </figure>
       </header>
@@ -26,7 +26,7 @@ export default function Landing({data}) {
         <section className="list-of-positions">
           <ul>
             {jobsData.jobs.map((data, index) => {
-              return <Job key={index} title={data.title} employer={data.employer} location={data.location} />
+              return <Job key={index} startdate={data.startdate} enddate={data.enddate} title={data.title} employer={data.employer} location={data.location} />
             })}
           </ul>
         </section>
@@ -35,7 +35,7 @@ export default function Landing({data}) {
         <h2>Education</h2>
         <section className="list-of-studies mt-0">
           {eduData.education.map((data, index) => {
-            return <Edu key={index} degree={data.degree} fieldofstudies={data.fos} university={data.university} />
+            return <Edu key={index} degree={data.degree} startdate={data.startdate} enddate={data.enddate} fieldofstudies={data.fos} university={data.university} />
           })}
         </section>
       </article>

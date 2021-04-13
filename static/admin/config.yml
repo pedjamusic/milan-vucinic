@@ -35,10 +35,10 @@ collections:
           - { label: "Date of Birth", name: dob, widget: date, format: "D.M.YYYY." }
           - { label: E-Mail, name: email }
           - { label: "Contact Phone", name: tel }
-          - { label: "Marital Status", name: marriage, required: false, widget: select, options: ["Yes", "No", "Preffer not to say"]}
-          - { label: Quote, name: quote, required: false, default: "Lorem ipsum, dolor sit amet consectetur adipisicing elit." }
-      - name: 'jobs'
-        label: 'Jobs'
+          - { label: "Marital Status", name: marriage, required: false, widget: select, options: ["Yes", "No", "Prefer not to say"], default: "Prefer not to say"}
+          - { label: Quote, name: quote, required: false, default: null }
+      - name: "jobs"
+        label: "Jobs"
         file: content/jobs.json
         extension: json
         editor:
@@ -46,20 +46,20 @@ collections:
         fields:
           - name: jobs
             label: Jobs
-            label_singular: jobs
+            label_singular: job
             summary: "{{fields.title}} @{{fields.employer}}"
             widget: list
             fields:
               - { label: Category, name: category, widget: hidden, default: jobs }
               - { label: Title, name: title }
               - { label: Employer, name: employer }
-              - { label: "Start Date", name: startdate, widget: date, format: "YYYY-MM" }
-              - { label: "End Date", name: enddate, widget: datetime, format: "YYYY-MM" }
+              - { label: "Start Date", name: startdate, widget: date, date_format: "YYYY. MM.", format: "YYYY-MM" }
+              - { label: "End Date", name: enddate, widget: datetime, date_format: "YYYY. MM.", format: "YYYY-MM" }
               - { label: Location, name: location, required: false }
-              - { label: Description, name: description, widget: markdown, required: false }
+              - { label: Details, name: details, widget: markdown, required: false, default: null }
               - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
-      - name: 'education'
-        label: 'Education'
+      - name: "education"
+        label: "Education"
         file: content/education.json
         extension: json
         editor:
@@ -67,7 +67,7 @@ collections:
         fields:
           - name: education
             label: education
-            summary: "{{fields.degree}}"
+            summary: "{{fields.degree}} - {{fields.fos}}"
             widget: list
             fields:
               - { label: Category, name: category, widget: hidden, default: education }
@@ -76,5 +76,38 @@ collections:
               - { label: University, name: university }
               - { label: "Start Date", name: startdate, widget: date, format: "YYYY-MM" }
               - { label: "End Date", name: enddate, widget: date, format: "YYYY-MM" }
-              - { label: Description, name: description, widget: markdown, required: false }
+              - { label: Details, name: details, widget: markdown, required: false, default: null }
               - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
+      - name: "courses"
+        label: "Courses"
+        label_singular: "course"
+        file: content/courses.json
+        extension: json
+        editor:
+          preview: false
+        fields:
+          - name: course
+            label: Course
+            summary: "{{fields.coursename}}"
+            widget: list
+            fields:
+              - { label: "Course Name", name: coursename }
+              - { label: Issuer, name: issuer, required: false, default: null }
+      - name: achievements
+        label: Achievements
+        label_singular: achievement
+        file: content/achievements.json
+        extension: json
+        editor:
+          preview: false
+        fields:
+          - name: achievements
+            label: Achievements
+            label_singular: achievement
+            summary: "{{fields.year}} {{fields.event}}"
+            widget: list
+            fields:
+              - { label: Event, name: event }
+              - { label: Location, name: locations, required: false, default: null }
+              - { label: Achievement, name: achievement }
+              - { label: Year, name: year, widget: date, date_format: "YYYY", format: "YYYY" }
