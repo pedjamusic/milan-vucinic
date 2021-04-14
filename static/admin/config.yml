@@ -25,8 +25,8 @@ collections:
         delete: false
         editor:
           preview: false
-        file: content/personal.md
-        extension: md
+        file: content/personal.json
+        extension: json
         fields:
           - { label: Category, name: category, widget: hidden, default: personal }
           - { label: Photo, name: photo, widget: image, allow_multiple: false }
