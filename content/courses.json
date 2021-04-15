@@ -1,0 +1,29 @@
+{
+  "courses": [
+    {
+      "coursename": "CPR and First Aid"
+    },
+    {
+      "coursename": "VERT – G-force high performance tool"
+    },
+    {
+      "coursename": "IMPACT course",
+      "issuer": "Team-USA"
+    },
+    {
+      "coursename": "Prevention of child abuse through ICT",
+      "issuer": "Ministry of Education, Serbia"
+    },
+    {
+      "coursename": "Power-Plate instructor, TRX – instructor",
+      "issuer": "PT"
+    },
+    {
+      "coursename": "Graduated Volleyball Coach"
+    },
+    {
+      "coursename": "testCourseName",
+      "issuer": "testLand"
+    }
+  ]
+}

@@ -86,8 +86,9 @@ collections:
         editor:
           preview: false
         fields:
-          - name: course
-            label: Course
+          - name: courses
+            label: Courses
+            label_singular: course
             summary: "{{fields.coursename}}"
             widget: list
             fields:
@@ -108,6 +109,6 @@ collections:
             widget: list
             fields:
               - { label: Event, name: event }
-              - { label: Location, name: locations, required: false, default: null }
-              - { label: Achievement, name: achievement }
+              - { label: Location, name: location, required: false, default: null }
+              - { label: Achieved, name: achieved }
               - { label: Year, name: year, widget: date, date_format: "YYYY", format: "YYYY" }

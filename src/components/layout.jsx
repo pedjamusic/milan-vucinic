@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Header from '../components/header'
-import Navigation from '../components/navigation'
+import Header from '../components/partials/header'
+import Navigation from '../components/partials/navigation'
 
 import headerData from '../../content/personal.json'
 

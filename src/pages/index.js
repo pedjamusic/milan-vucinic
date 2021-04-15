@@ -1,11 +1,15 @@
 import React from 'react'
 
 import Layout from '../components/layout'
-import Job from '../components/job'
-import Edu from '../components/edu'
+import Job from '../components/sections/job'
+import Edu from '../components/sections/edu'
+import Course from '../components/sections/course'
+import Achievement from '../components/sections/achievement'
 
 import jobsData from '../../content/jobs.json'
 import eduData from '../../content/education.json'
+import coursesData from '../../content/courses.json'
+import achieveData from '../../content/achievements.json'
 
 export default function Landing() { 
   return (
@@ -26,6 +30,24 @@ export default function Landing() {
         <section className="list-of-studies mt-0">
           { eduData.education.map( ( data, index ) => { 
             return <Edu key={ index } degree={ data.degree } startdate={ data.startdate } enddate={ data.enddate } fieldofstudies={ data.fos } university={ data.university } />
+          } ) }
+        </section>
+      </article>
+
+      <article className="courses">
+        <h2>Other qualifications, courses, skills</h2>
+        <section className="list-of-courses mt-0">
+          { coursesData.courses.map( ( data, index ) => { 
+            return <Course key={ index } coursename={ data.coursename } issuer={ data.issuer } />
+          } ) }
+        </section>
+      </article>
+
+      <article className="achievements">
+        <h2>Other qualifications, courses, skills</h2>
+        <section className="list-of-achievements mt-0">
+          { achieveData.achievements.map( ( data, index ) => { 
+            return <Achievement key={ index } eventname={ data.event } location={ data.location } achieved={ data.achieved } year={ data.year } />
           } ) }
         </section>
       </article>
