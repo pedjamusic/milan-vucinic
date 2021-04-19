@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 
-export default function Header( props ) { 
+export default function Header( props ) {
   return (
     <header>
       <figure className="flex md:block items-center md:items-start">

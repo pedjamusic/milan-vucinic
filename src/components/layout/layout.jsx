@@ -1,9 +1,10 @@
 import React from 'react'
 
-import Header from '../components/partials/header'
-import Navigation from '../components/partials/navigation'
+import Header from '../partials/header'
+import Navigation from '../partials/navigation'
+// import Footer from '../partials/footer'
 
-import headerData from '../../content/personal.json'
+import headerData from '../../../content/personal.json'
 
 export default function Layout({ children }) {
   return ( 
@@ -14,6 +15,8 @@ export default function Layout({ children }) {
       <Navigation />
 
       { children }
+
+      {/* <Footer /> */}
     </main>
   )
 }

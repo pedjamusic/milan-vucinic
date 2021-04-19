@@ -2,9 +2,9 @@ import React from 'react'
 
 export default function Course(props) {
   return (
-    <>
-      <h3>{ props.coursename }</h3>
-      { !!props.issuer ? <p>Issued by {props.issuer}.</p> : "" }
-    </>
+    <li>
+      <span>{ props.coursename }</span>
+      { !!props.issuer ? <span className="text-sm text-gray-400"> Issued by {props.issuer}.</span> : "" }
+    </li>
   )
 }
