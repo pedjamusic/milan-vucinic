@@ -5,7 +5,7 @@ import JobFull from '../components/jobfull'
 
 import jobsData from '../../content/jobs.json'
 
-export default function Landing() {
+export default function Experience() {
   return (
     <Layout>
       <article className="experience">
@@ -13,7 +13,8 @@ export default function Landing() {
         <section className="list-of-positions">
           { jobsData.jobs.map( ( data, index ) => {
             return <JobFull key={ index } title={ data.title } employer={ data.employer } startdate={ data.startdate } enddate={ data.enddate } location={ data.location } details={ data.details } gallery={ data.gallery } />
-            } ) }
+            })
+          }
         </section>
       </article>
     </Layout>

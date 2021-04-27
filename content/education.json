@@ -26,7 +26,11 @@
       "fos": "The International Coaching Enrichment Certificate Program",
       "university": "University of Delaware, US OTC Colorado Springs",
       "description": "ICECP Certificate - US Olympic Committee, International Olympic Committee",
-      "gallery": "assets/img_2836.jpg"
+      "gallery": [
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011908/IMG_2836_imhzz4.jpg",
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011910/IMG_2786_f3hq1t.jpg",
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011905/MV_a_zsekno.jpg"
+      ]
     }
   ]
 }

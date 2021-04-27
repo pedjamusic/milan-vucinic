@@ -1,14 +1,17 @@
 {
   "jobs": [
     {
-      "category": "jobs",
-      "startdate": "2018-04",
+      "details": "Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Nullam quis risus eget urna mollis ornare vel eu leo. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Integer posuere erat a ante venenatis dapibus posuere velit aliquet.",
       "enddate": "2021-04",
+      "startdate": "2018-04",
+      "gallery": [
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619533801/pro-vball-swe-01_pigc9w.png"
+      ],
+      "location": "Sweden",
       "title": "Head of Strength & Conditioning",
       "employer": "Professional Volleyball Club",
-      "location": "Sweden",
       "description": "Donec ullamcorper nulla non metus auctor fringilla. Maecenas faucibus mollis interdum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod.",
-      "gallery": "assets/pro-vball-swe-01.jpg"
+      "category": "jobs"
     },
     {
       "category": "jobs",
@@ -18,7 +21,9 @@
       "employer": "International English School",
       "location": "Stockholm, Sweden",
       "description": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec ullamcorper nulla non metus auctor fringilla. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis vestibulum.",
-      "gallery": "assets/img_2836.jpg"
+      "gallery": [
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619527727/MV_e_coetir.jpg"
+      ]
     },
     {
       "category": "jobs",
@@ -28,7 +33,10 @@
       "employer": "Washington State University",
       "location": "WA, US",
       "description": "Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Curabitur blandit tempus porttitor. Donec id elit non mi porta gravida at eget metus.",
-      "gallery": "assets/mv-e.jpg"
+      "gallery": [
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011908/IMG_2836_imhzz4.jpg",
+        "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011905/MV_a_zsekno.jpg"
+      ]
     }
   ]
 }

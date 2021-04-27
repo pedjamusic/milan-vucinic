@@ -1,5 +1,4 @@
 backend:
-  # name: github
   name: git-gateway
   repo: pedjamusic/milan-vucinic
   branch: main
@@ -13,6 +12,19 @@ publish_mode: editorial_workflow
 
 media_folder: static/assets
 public_folder: assets
+
+media_library:
+  name: cloudinary
+  config:
+    username: hi@iampedja.com
+    cloud_name: too-dear
+    api_key: '528391217167367'
+    multiple: true
+    default_transformations:
+      - - fetch_format: auto
+          width: 800
+          quality: auto
+          crop: scale
 
 collections:
   - label: Sections

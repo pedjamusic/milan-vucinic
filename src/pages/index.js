@@ -18,8 +18,8 @@ export default function Landing() {
         <h2>Experience <span className="text-sm">(brief)</span></h2>
         <section className="list-of-positions">
           <ul>
-            { jobsData.jobs.map( ( data, index ) => { 
-              return <Job key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } />
+            { jobsData.jobs.map(( data, index ) => { 
+              return <Job key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } gallery={ data.gallery } />
             })}
           </ul>
         </section>
@@ -27,7 +27,7 @@ export default function Landing() {
       <article className="education">
         <h2>Education</h2>
         <section className="list-of-studies mt-0">
-          { eduData.education.map( ( data, index ) => { 
+          { eduData.education.map(( data, index ) => { 
             return <Edu key={ index } degree={ data.degree } startdate={ data.startdate } enddate={ data.enddate } fieldofstudies={ data.fos } university={ data.university } />
           })}
         </section>
@@ -36,7 +36,7 @@ export default function Landing() {
         <h2>Other Qualifications, Courses, Skills</h2>
         <section className="list-of-courses mt-0">
           <ul>
-            { coursesData.courses.map( ( data, index ) => { 
+            { coursesData.courses.map(( data, index ) => { 
               return <Course key={ index } coursename={ data.coursename } issuer={ data.issuer } />
             })}
           </ul>
@@ -46,7 +46,7 @@ export default function Landing() {
         <h2>Achievemnts</h2>
         <section className="list-of-achievements mt-0">
           <ul>
-            { achieveData.achievements.map( ( data, index ) => { 
+            { achieveData.achievements.map(( data, index ) => { 
               return <Achievement key={ index } eventname={ data.event } location={ data.location } achieved={ data.achieved } year={ data.year } />
             })}
           </ul>
