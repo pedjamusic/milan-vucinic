@@ -12,7 +12,7 @@ export default function JobFull( props ) {
       {/* Description conditional */}
       { !!props.details ? <p className="my-2">{ props.details }</p> : "" }
       {/* Gallery */}
-      { props.gallery > 1 ? props.gallery.map( url => (<img src={ url.gallery } alt={ "Working as " + props.title } /> )) : <img src={ props.gallery } title={ "Working as " + props.title } /> }
+      { !!props.gallery ? props.gallery.map( url => (<img src={ url } alt={ "Working as " + props.title } /> )) : "" }
     </div>
   )
 }
