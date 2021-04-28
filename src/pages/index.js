@@ -19,7 +19,7 @@ export default function Landing() {
         <section className="list-of-positions">
           <ul>
             { jobsData.jobs.map(( data, index ) => { 
-              return <Job key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } gallery={ data.gallery } />
+              return <Job key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } />
             })}
           </ul>
         </section>

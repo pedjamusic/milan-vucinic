@@ -8,7 +8,7 @@
       "fos": "Physical Education Teacher / Kinesiology",
       "university": "Faculty of Sports and Physical Education University of Novi Sad, Serbia",
       "description": "Studirao deceniju.",
-      "gallery": ""
+      "galleryURL": ""
     },
     {
       "category": "education",
@@ -16,7 +16,8 @@
       "enddate": "2016-04",
       "degree": "Master",
       "fos": "Sports Medicine & Physiotherapy",
-      "university": "Association of Centers for Inter. & Multidisciplinary Studies and Research University of Novi Sad, Serbia"
+      "university": "Association of Centers for Inter. & Multidisciplinary Studies and Research University of Novi Sad, Serbia",
+      "galleryURL": ""
     },
     {
       "category": "education",
@@ -26,7 +27,7 @@
       "fos": "The International Coaching Enrichment Certificate Program",
       "university": "University of Delaware, US OTC Colorado Springs",
       "description": "ICECP Certificate - US Olympic Committee, International Olympic Committee",
-      "gallery": [
+      "galleryURL": [
         "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011908/IMG_2836_imhzz4.jpg",
         "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011910/IMG_2786_f3hq1t.jpg",
         "https://res.cloudinary.com/too-dear/image/upload/c_scale,f_auto,q_auto,w_800/v1619011905/MV_a_zsekno.jpg"

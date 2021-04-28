@@ -69,7 +69,7 @@ collections:
               - { label: "End Date", name: enddate, widget: datetime, date_format: "YYYY. MM.", format: "YYYY-MM" }
               - { label: Location, name: location, required: false }
               - { label: Details, name: details, widget: markdown, required: false, default: null }
-              - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
+              - { label: Gallery, name: gallerysrc, widget: image, allow_multiple: true, required: false }
       - name: "education"
         label: "Education"
         file: content/education.json
@@ -89,7 +89,7 @@ collections:
               - { label: "Start Date", name: startdate, widget: date, format: "YYYY-MM" }
               - { label: "End Date", name: enddate, widget: date, format: "YYYY-MM" }
               - { label: Details, name: details, widget: markdown, required: false, default: null }
-              - { label: Gallery, name: gallery, widget: image, allow_multiple: true, required: false }
+              - { label: Gallery, name: gallerysrc, widget: image, allow_multiple: true, required: false }
       - name: "courses"
         label: "Courses"
         label_singular: "course"

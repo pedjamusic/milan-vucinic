@@ -5,6 +5,39 @@
  */
 
 module.exports = {
+  siteMetadata: {
+    title: `Reasumby`,
+    description: `Interactive Resume Gatsby Theme`,
+    author: `Hulk Hogan`,
+    tagline: `Lorem ipsum`,
+    menuLinks: [
+      {
+        name: "Experience",
+        url: "/experience/",
+        type: "internal"
+      },
+      {
+        name: "Education",
+        url: "/education/",
+        type: "internal"
+      },
+      {
+        name: "Courses",
+        url: "/courses/",
+        type: "internal"
+      },
+      {
+        name: "Achievements",
+        url: "/achievements/",
+        type: "internal"
+      },
+      {
+        name: "Notable Experiences",
+        url: "/notable/",
+        type: "internal"
+      }
+    ]
+  },
   plugins: [
     {
       resolve: "gatsby-source-filesystem",
