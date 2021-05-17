@@ -17,11 +17,8 @@ export default function JobFull( props ) {
       { !!props.details ? <p className="mb-4">{ props.details }</p> : "" }
 
       {/* Gallery (if any) */}
-      { props.gallerysrc
-        ? props.gallerysrc.length > 1
-          ? props.gallerysrc.map( url => (<Gallery src={ url } alt={ "Working as " + props.title } /> ))
-          : <img src={ props.gallerysrc } alt={ "Working as " + props.title } />
-        : null
+      { props.gallerysrc &&
+          props.gallerysrc.length > 1 ? props.gallerysrc.map( url => (<Gallery src={ url } alt={ "Working as " + props.title } /> )) : <img src={ props.gallerysrc } alt={ "Working as " + props.title } />
       }
     </div>
   )

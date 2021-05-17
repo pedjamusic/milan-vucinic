@@ -49,3 +49,9 @@
     }
 
 }
+
+@layer utilities {
+    .column {
+        flex-basis: 100%;
+    }
+}
