@@ -23,15 +23,18 @@
     h6 {
         @apply text-base;
     }
-    article {
+    section {
         @apply mt-8;
     }
-    article > h3 {
+    section > h3 {
         @apply mt-2;
     }
 }
 
 @layer components {
+    header figure img {
+        max-width: 120px;
+    }
     nav li {
         @apply md:inline-block p-0 md:px-1;
     }
@@ -51,7 +54,16 @@
 }
 
 @layer utilities {
-    .column {
+    /* .column {
         flex-basis: 100%;
+        flex: 25%;
+        max-width: 25%;
+        @apply p-1;
+    } */
+    .gallery {
+        grid-gap: 8px;
+    }
+    .gallery__img {
+        @apply w-full h-full object-cover;
     }
 }

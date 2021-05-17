@@ -8,15 +8,15 @@ import jobsData from '../../content/jobs.json'
 export default function Experience() {
   return (
     <Layout>
-      <article className="experience">
+      <section className="experience">
         <h2>Experience</h2>
-        <section className="list-of-positions">
+        <article className="list-of-positions">
           { jobsData.jobs.map( ( data, index ) => {
             return <JobFull key={ index } title={ data.title } employer={ data.employer } startdate={ data.startdate } enddate={ data.enddate } location={ data.location } details={ data.details } gallerysrc={ data.gallerysrc } />
             })
           }
-        </section>
-      </article>
+        </article>
+      </section>
     </Layout>
   )
 }

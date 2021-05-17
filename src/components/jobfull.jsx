@@ -2,6 +2,7 @@ import React from 'react'
 import Gallery from './gallery'
 
 export default function JobFull( props ) {
+
   return (
     <div key={ props.key } className="mb-6">
       {/* Title */}
@@ -17,9 +18,14 @@ export default function JobFull( props ) {
       { !!props.details ? <p className="mb-4">{ props.details }</p> : "" }
 
       {/* Gallery (if any) */}
+      {/* <div className="row flex flex-row flex-wrap"> */}
+      <div className={`row gallery grid grid-cols-${props.gallerysrc.length} grid-rows-1`}>
       { props.gallerysrc &&
-          props.gallerysrc.length > 1 ? props.gallerysrc.map( url => (<Gallery src={ url } alt={ "Working as " + props.title } /> )) : <img src={ props.gallerysrc } alt={ "Working as " + props.title } />
+          props.gallerysrc.length > 1 ? props.gallerysrc.map( url => (
+            <Gallery src={ url } alt={ "Working as " + props.title } /> ))
+            : <img className="column" src={ props.gallerysrc } alt={ "Working as " + props.title } />
       }
+      </div>
     </div>
   )
 }
