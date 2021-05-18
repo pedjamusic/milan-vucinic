@@ -1,7 +1,7 @@
 import React from 'react'
 
-import Layout from '../components/layout/layout'
-import JobFull from '../components/jobfull'
+import Layout from '../components/layout/Layout'
+import JobFull from '../components/JobFull'
 
 import jobsData from '../../content/jobs.json'
 
