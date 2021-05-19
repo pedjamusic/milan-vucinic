@@ -1,10 +1,10 @@
 import React from 'react'
 
-import Layout from '../components/layout/layout'
-import Job from '../components/sections/job'
-import Edu from '../components/sections/edu'
-import Course from '../components/sections/course'
-import Achievement from '../components/sections/achievement'
+import Layout from '../components/layout/Layout'
+import JobBrief from '../components/briefs/JobBrief'
+import Edu from '../components/briefs/Edu'
+import Course from '../components/briefs/Course'
+import Achievement from '../components/briefs/Achievement'
 
 import jobsData from '../../content/jobs.json'
 import eduData from '../../content/education.json'
@@ -19,7 +19,7 @@ export default function Landing() {
         <article className="list-of-positions">
           <ul>
             { jobsData.jobs.map(( data, index ) => { 
-              return <Job key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } />
+              return <JobBrief key={ index } startdate={ data.startdate } enddate={ data.enddate } title={ data.title } employer={ data.employer } location={ data.location } />
             })}
           </ul>
         </article>
