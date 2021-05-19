@@ -9,7 +9,7 @@ export default function Experience() {
   return (
     <Layout>
       <section className="experience">
-        <h2>Experience</h2>
+        <h2 className="mb-4">Experience</h2>
         <article className="list-of-positions">
           { jobsData.jobs.map( ( data, index ) => {
             return <Jobs key={ index } title={ data.title } employer={ data.employer } startdate={ data.startdate } enddate={ data.enddate } location={ data.location } details={ data.details } gallerysrc={ data.gallerysrc } />

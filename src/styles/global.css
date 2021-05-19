@@ -23,6 +23,13 @@
     h6 {
         @apply text-base;
     }
+    a {
+        @apply underline;
+    }
+    a:hover {
+        @apply text-blue-500;
+    }
+
     section {
         @apply mt-8;
     }
@@ -44,13 +51,6 @@
     nav li:last-child {
         @apply md:pr-0;
     }
-    nav li a {
-        @apply underline;
-    }
-    nav li a:hover {
-        @apply text-blue-500;
-    }
-
 }
 
 @layer utilities {

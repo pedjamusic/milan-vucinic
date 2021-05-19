@@ -36,13 +36,13 @@ export default function Jobs( props ) {
       <h3>{ props.title }</h3>
 
       {/* Employer and location (if any) */}
-      <p>at { props.employer }{ !!props.location && ", " + props.location }</p>
+      <p className="text-gray-500">at { props.employer }{ !!props.location && ", " + props.location }</p>
 
       {/* Duration */}
-      <p className="mb-2">from { props.startdate } to { props.enddate }.</p>
+      <p className="mb-2 text-gray-400">from { props.startdate } to { props.enddate }.</p>
 
       {/* Description (if any) */}
-      { props.details && <p className="mb-4">{ props.details }</p> }
+      { props.details && <p className="mb-4 text-sm max-w-prose">{ props.details }</p> }
 
       {/* Gallery (if any) */}
       { galleryRender }
