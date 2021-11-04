@@ -10,7 +10,7 @@ export default function Jobs( props ) {
   const [toggler, setToggler] = useState(false);
 
   if ( props.gallerysrc ) {
-    if ( props.gallerysrc.length > 1 ) {
+    if ( props.gallerysrc.length >= 1 ) {
       var galleryRender = (
         <>
           <button className="underline hover:text-blue-500 text-left" onClick={() => setToggler(!toggler)}>(englarge photo gallery)</button>
